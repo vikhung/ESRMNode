@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"D:\\\\VikGitHub\\\\VikClaudeCode\\\\SoftwareManager\" -Recurse -Depth 4 | ForEach-Object { $_.FullName })",
+      "Bash(Get-ChildItem -Path \"D:\\\\VikGitHub\\\\VikClaudeCode\\\\SoftwareManager\" -Recurse -Depth 2)",
+      "Bash(Select-Object FullName)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:spring.io)",
+      "WebFetch(domain:mvnrepository.com)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Java\\\\jdk-21\\\\bin\\\\javap.exe\" \"$env:TEMP\\\\DatatypeFeature.class\" 2>&1)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Java\\\\jdk-21\\\\bin\\\\javap.exe\" \"$env:TEMP\\\\ObjectMapper.class\" 2>&1 | Select-String \"builder|Builder|disable\" | Select-Object -First 20)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Java\\\\jdk-21\\\\bin\\\\javap.exe\" \"$env:TEMP\\\\SerializationFeature.class\" 2>&1 | Select-String \"public static final\")",
+      "Bash(dir *)",
+      "Bash(mvn compile *)",
+      "Bash(mvn clean *)",
+      "Bash(mvn spring-boot:run -Dspring-boot.run.arguments=\"--spring.profiles.active=offline\")",
+      "Bash(git -C \"D:\\\\VikGitHub\\\\VikClaudeCode\\\\ESRMNode\" status --short)",
+      "Bash(Get-ChildItem D:\\\\VikGitHub\\\\VikClaudeCode\\\\ESRMNode\\\\docs *)",
+      "PowerShell(Get-ChildItem \"D:\\\\VikGitHub\\\\VikClaudeCode\\\\ESRMNode\" -Depth 4 | Where-Object { $_.PSIsContainer } | Select-Object FullName)"
+    ]
+  }
+}
